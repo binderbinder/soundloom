@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soundloom</title>
+  <script defer src="js/soundloom.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center p-8">
+  <h1 class="text-4xl font-bold mb-6">Soundloom</h1>
+
+  <div class="flex flex-col md:flex-row gap-8 mb-8">
+    <div class="flex flex-col gap-4">
+      <button id="playBtn" class="bg-green-500 hover:bg-green-600 px-6 py-2 rounded-xl">Play</button>
+      <button id="stopBtn" class="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-xl">Stop</button>
+
+      <label class="mt-4">BPM: <span id="bpmDisplay">120</span></label>
+      <input id="bpmSlider" type="range" min="60" max="180" value="120" class="w-full">
+
+      <label class="mt-4">Upload Sample:</label>
+      <input id="sampleUpload" type="file" accept="audio/*" class="text-black">
+    </div>
+
+    <div id="grid" class="grid grid-cols-16 gap-1"></div>
+  </div>
+
+  <div id="sampleSelect" class="flex flex-wrap gap-2">
+    <!-- Sample buttons will be inserted here -->
+  </div>
+</body>
+</html>
